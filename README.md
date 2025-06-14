@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/public/images/logo-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="[/public/imageslogo-light.png](https://github.com/Katteu/LockedIn/blob/main/public/images/logo-light.png?raw=true)">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Katteu/LockedIn/blob/main/public/images/logo-light.png?raw=true">
     <img style="margin: 20px;" alt="LockedIn Logo" src="/public/images/logo-light.png" width="481">
   </picture>
 </div>
