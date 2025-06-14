@@ -26,7 +26,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`px-[144px] py-[20px] gap-[20px] flex flex-col ${montserrat.variable}`}>
+      <body className={`bg-white dark:bg-secondary px-[36px] sm:px-[72px] lg:px-[144px] py-[20px] gap-[20px] flex flex-col ${montserrat.variable}`}>
         <Providers>
           <Header />
           {children}

@@ -36,12 +36,12 @@ export default function Home() {
 
   return (
     <div className="stagger-animate">
-      <div className="py-[40px]">
-        <h1 className="font-bold text-[54px]">
+      <div className="pt-[20px] pb-[40px] xl:py-[40px]">
+        <h1 className="font-bold text-[44px] md:text-[54px] dark:text-white leading-14">
           <span className="text-primary">Lock It In! </span>
           Remember it for Real.
         </h1>
-        <p className="text-[24px]">
+        <p className="text-[18px] md:text-[24px] dark:text-white">
           Type any text below and start memorizing it! Do it faster, simpler, and stress-free!
         </p>
       </div>
@@ -54,9 +54,9 @@ export default function Home() {
             className="w-full min-h-[500px] py-[25px] px-[30px] rounded-[20px] bg-input resize-none outline-none"
           />
           {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-          <p className="font-bold text-[#656565]">Words Remaining: <span className="font-medium">{wordsRemaining}</span></p>
+          <p className="font-bold text-[#656565] dark:text-white">Words Remaining: <span className="font-medium">{wordsRemaining}</span></p>
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end max-sm:pb-10">
           <Button onClick={navigateToMemorize}>
             Start the Drill
             <BsArrowRight className="text-[20px] text-white" />

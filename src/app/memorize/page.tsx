@@ -54,41 +54,44 @@ const MemorizePage = () => {
 
   return (
     <div className="stagger-animate">
-      <div className="flex flex-col py-[30px]">
+      <div className="flex flex-col py-[30px] dark:text-white">
         <h1 className="text-primary font-bold text-[32px]">
           {headingText[currentLevel - 1].level}
         </h1>
         {headingText[currentLevel - 1].description}
       </div>
       <div className="flex flex-col gap-[50px]">
-        <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[40px] sm:gap-[20px]">
           {rows.map((row, rowIndex) => (
-            <div key={rowIndex} className="flex gap-[15px]">
-              {row.word.split(" ").map((word, wordIndex) => (
-                <Tile
-                  key={wordIndex}
-                  text={word}
-                  isHidden={row.isHidden[wordIndex]}
-                  onClick={() => handleTileClick(rowIndex, wordIndex)}
-                />
-              ))}
-            </div>
+        <div
+          key={rowIndex}
+          className="flex gap-[5px] lg:gap-[15px] flex-wrap w-full"
+        >
+          {row.word.split(" ").map((word, wordIndex) => (
+            <Tile
+          key={wordIndex}
+          text={word}
+          isHidden={row.isHidden[wordIndex]}
+          onClick={() => handleTileClick(rowIndex, wordIndex)}
+            />
           ))}
         </div>
-        <div className="flex justify-between">
-          <Button outline onClick={handleBackButton}>
+          ))}
+        </div>
+        <div className="flex max-sm:flex-col max-sm:gap-[20px] max-sm:pb-[20px] justify-between">
+          <Button outline onClick={handleBackButton} className="max-sm:justify-center max-sm:order-2">
             <BsArrowLeft />
             {currentLevel === 1 ? "Change Text" : "Previous Level"}
           </Button>
           {currentLevel > 1 && (
             <Button
               onClick={() => triggerRows(currentLevel)}
-              className="bg-black! hover:bg-white! hover:text-black hover:border hover:outline-black"
+              className="max-sm:justify-center max-sm:order-1 bg-black! hover:bg-white! dark:border dark:outline-white hover:text-black hover:border hover:outline-black"
             >
               Retry
             </Button>
           )}
-          <Button onClick={handleNextButton}>
+          <Button onClick={handleNextButton} className="max-sm:justify-center max-sm:order-3">
             {currentLevel == 5 && (
               <GiLightBulb className="text-[20px] text-white" />
             )}

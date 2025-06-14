@@ -56,29 +56,29 @@ const Header = () => {
   
   return (
     <header className="animate-fade-in-left py-[15px] flex justify-between items-center">
-        <h1 className="text-[24px] font-black">
+        <h1 className="text-[24px] font-black dark:text-white">
             <span className="text-primary">Locked</span>In
         </h1>
         <div className="flex gap-[15]">
-            <button onClick={toggleTheme}>
+            <button onClick={toggleTheme} className="outline-none">
                 {theme === 'light' ? (
                     <MoonIcon className="hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out" />
                 ) : (
-                    <SunIcon className="hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out" />
+                    <SunIcon className="text-white hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out" />
                 )}
             </button>
-            <button onClick={toggleAudio}>
+            <button onClick={toggleAudio} className="outline-none">
                 {isMuted ? (
                     <div className="relative">
-                    <SpeakerMuteIcon className="hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out"/>
+                    <SpeakerMuteIcon className="dark:text-white hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out"/>
                     {showMessage && (
-                        <div className="animate-float absolute top-[35px] mt-2 p-2 bg-primary rounded-md before:content-[''] before:absolute before:top-[-5px] before:left-[15px] before:-translate-x-1/2 before:border-l-[6px] before:border-l-transparent before:border-r-[6px] before:border-r-transparent before:border-b-[6px] before:border-b-primary">
+                        <div className="animate-float absolute top-[35px] mt-2 p-2 max-sm:right-0! max-sm:mr-0! bg-primary rounded-md before:content-[''] before:absolute before:top-[-5px] max-sm:before:right-[5px] max-sm:before:left-auto before:left-[15px] before:-translate-x-1/2 before:border-l-[6px] before:border-l-transparent before:border-r-[6px] before:border-r-transparent before:border-b-[6px] before:border-b-primary">
                             <p className="text-[12px] text-white">You can play music while memorizing!</p>
                         </div>
                     )}
                 </div>
                 ) : (
-                    <SpeakerIcon className="hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out"/>
+                    <SpeakerIcon className="dark:text-white hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out"/>
                 )}
             </button>
         </div>
