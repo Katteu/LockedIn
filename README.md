@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="/public/images/logo-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="/public/imageslogo-light.png">
-    <img style="margin-bottom: 20px;" alt="LockedIn Logo" src="/public/images/logo-light.png" width="481">
+    <img style="margin: 20px;" alt="LockedIn Logo" src="/public/images/logo-light.png" width="481">
   </picture>
 </div>
 
