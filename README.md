@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/public/images/logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="/public/imageslogo-light.png">
+    <img alt="LockedIn Logo" src="/public/images/logo-light.png" width="300">
+  </picture>
+</div>
 
-## Getting Started
+A web application that can be used as a tool for text memorization using spaced repetition techniques!
 
-First, run the development server:
+## 🗒️ Features
+- **5 Difficulty Levels**: Gradually increasing levels equates to your familiarity with the text
+- **Interactive Tiles**: Click hidden words to reveal them while memorizing
+- **Responsive Design**: Can be used both on mobile and web browsers
+- **Dark/Light Mode Support**: Has a light and dark mode version
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧩 How Each Level Works
+1. **Level 1**: All words are visible! Familiarize yourself with the text.
+2. **Level 2**: One (1) random word hidden per line.
+3. **Level 3**: Three (3) random words hidden per line.
+4. **Level 4**: Only one (1) word is visible per line.
+5. **Level 5**: All words are hidden. The 'complete recall test' !
