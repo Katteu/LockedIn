@@ -72,7 +72,7 @@ const Header = () => {
                     <div className="relative">
                     <SpeakerMuteIcon className="dark:text-white hover:text-primary hover:scale-[1.1] cursor-pointer transition-all duration-500 ease-in-out"/>
                     {showMessage && (
-                        <div className="animate-float absolute top-[35px] mt-2 p-2 max-sm:right-0! max-sm:mr-0! bg-primary rounded-md before:content-[''] before:absolute before:top-[-5px] max-sm:before:right-[5px] max-sm:before:left-auto before:left-[15px] before:-translate-x-1/2 before:border-l-[6px] before:border-l-transparent before:border-r-[6px] before:border-r-transparent before:border-b-[6px] before:border-b-primary">
+                        <div className="animate-float z-[1000] absolute top-[35px] mt-2 p-2 max-sm:right-0! max-sm:mr-0! bg-primary rounded-md before:content-[''] before:absolute before:top-[-5px] max-sm:before:right-[5px] max-sm:before:left-auto before:left-[15px] before:-translate-x-1/2 before:border-l-[6px] before:border-l-transparent before:border-r-[6px] before:border-r-transparent before:border-b-[6px] before:border-b-primary">
                             <p className="text-[12px] text-white">You can play music while memorizing!</p>
                         </div>
                     )}
