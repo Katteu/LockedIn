@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react'
 import { ThemeProvider } from './ThemeProvider'
+import { TextProvider } from './TextProvider'
 
 interface ProvidersProps {
   children: ReactNode
@@ -10,7 +11,9 @@ interface ProvidersProps {
 export default function Providers({ children }: ProvidersProps) {
   return (
     <ThemeProvider>
-      {children}
+      <TextProvider>
+        {children}
+      </TextProvider>
     </ThemeProvider>
   )
 } 

@@ -2,7 +2,10 @@
 
 @theme {
   --color-primary: #0D51C5;
+  --color-input: #EFEFEF;
+  --color-box: #D9D9D9;
   --animate-float: float 3s ease-in-out infinite;
+  --animate-fade-in-left: fade-in-left 0.5s ease-out forwards;
 
   @keyframes float {
     0% {
@@ -15,8 +18,27 @@
       transform: translateY(0px);
     }
   }
+
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.stagger-animate > * {
+  opacity: 0;
+  animation: fade-in-left 0.8s ease-out forwards;
+}
+
+.stagger-animate > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animate > *:nth-child(2) { animation-delay: 0.4s; }

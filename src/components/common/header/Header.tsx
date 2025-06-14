@@ -44,7 +44,7 @@ const Header = () => {
   }
   
   return (
-    <header className="py-[15px] flex justify-between items-center">
+    <header className="animate-fade-in-left py-[15px] flex justify-between items-center">
         <h1 className="text-[24px] font-black">
             <span className="text-primary">Locked</span>In
         </h1>

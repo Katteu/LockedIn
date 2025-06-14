@@ -4,3 +4,8 @@ export interface IconProps {
     color?: string;
     className?: string;
 }
+
+export interface RowData {
+  word: string;
+  isHidden: boolean[];
+}
