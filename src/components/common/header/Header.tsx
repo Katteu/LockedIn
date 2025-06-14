@@ -5,16 +5,23 @@ import React, { useState, useEffect } from 'react'
 import { useTheme } from '@/providers/ThemeProvider'
 import SpeakerIcon from '@/assets/icons/SpeakerIcon'
 import SpeakerMuteIcon from '@/assets/icons/SpeakerMuteIcon'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme()
+  const pathname = usePathname()
 
   const [isMuted, setIsMuted] = useState(true)
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null)
   const [showMessage, setShowMessage] = useState(true)
 
   useEffect(() => {
-    const audioSrc = window.location.pathname === '/' 
+    if (audio) {
+      audio.pause()
+      audio.currentTime = 0
+    }
+
+    const audioSrc = pathname === '/' 
       ? '/audio/poke-gym.mp3'
       : '/audio/coconut-mall.mp3'
     
@@ -22,13 +29,17 @@ const Header = () => {
     audioElement.loop = true
     setAudio(audioElement)
 
+    if (!isMuted) {
+      audioElement.play()
+    }
+
     return () => {
       if (audio) {
         audio.pause()
         audio.currentTime = 0
       }
     }
-  }, [])
+  }, [pathname, isMuted])
 
   const toggleAudio = () => {
     if (!audio) return

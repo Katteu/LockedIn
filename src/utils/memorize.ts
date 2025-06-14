@@ -1,7 +1,6 @@
 import { RowData } from '@/interfaces/common';
 
 export const generateRows = (text: string, currentLevel: number): RowData[] => {
-  console.log(currentLevel);
   const words = text.split(" ");
   const rows: RowData[] = [];
 
@@ -47,7 +46,6 @@ export const generateRows = (text: string, currentLevel: number): RowData[] => {
         isHidden: hiddenWords.map((w) => w.isHidden),
       });
     } else {
-      console.log("HERE?");
       rows.push({
         word: words.slice(i, i + 5).join(" "),
         isHidden: Array(words.slice(i, i + 5).length).fill(true),
